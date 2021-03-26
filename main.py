@@ -7,7 +7,7 @@ eth = Etherscan(API_KEY)
 client = etherscan_py.Client(API_KEY)
 
 contract = str(input("Contract adress?"))
-block = str(input("Block Number?"))
+block = int(input("Block Number?"))
 
 tx = client.get_all_transactions(from_address=contract,status=2,from_block=block)
 nonce = []
